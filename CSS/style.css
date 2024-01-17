@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;  
+}
+
+body{
+    font-family: 'Great Vibes', cursive;
+    list-style: none;
+}
+
+:root{
+    --color-primario:#0f0f0f;
+    --color-secundario:#fff;
+    --color-terciario:#053f11;
+}
+
+nav{
+    background: var(--color-primario);
+    padding: 5px 40px;
+    position: fixed;
+    z-index: 99;/*Para hacer el nav adelante*/
+    width: 100%;
+}
+
+nav ul{
+    list-style:none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    padding-left: 0px;
+}
+
+nav ul li{
+    padding: 15px 0px;/*Margen*/
+    cursor: pointer;
+}
+
+nav ul li .items{
+    position: relative;
+    width: auto;
+    margin: 0px 16px;
+    text-align: center;
+    order: 3;
+}

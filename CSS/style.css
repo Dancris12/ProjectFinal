@@ -1,50 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Whisper&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;  
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
 }
 
 body{
-    font-family: 'Great Vibes', cursive;
-    list-style: none;
+    font-family: 'Nunito', sans-serif;
 }
 
 :root{
     --color-primario:#0f0f0f;
     --color-secundario:#fff;
-    --color-terciario:#053f11;
+    --color-terciario:#19e012;
 }
 
 nav{
     background: var(--color-primario);
     padding: 5px 40px;
-    position: fixed;
-    z-index: 99;/*Para hacer el nav adelante*/
-    width: 100%;
-}
-
-nav ul{
-    list-style:none;
+  }
+  nav ul{
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
-
-ul{
-    padding-left: 0px;
-}
-
-nav ul li{
-    padding: 15px 0px;/*Margen*/
+  }
+  nav ul li{
+    padding: 15px 0;
     cursor: pointer;
-}
-
-nav ul li .items{
+  }
+  nav ul li.items{
     position: relative;
     width: auto;
-    margin: 0px 16px;
+    margin: 0 16px;
     text-align: center;
     order: 3;
-}
+  }
+  nav ul li.items:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 5px;
+    height: 2px;
+    width: 100%;
+    background: var(--color-terciario);
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+  nav ul li.items:hover:after{
+    opacity: 1;
+    bottom: 8px;
+  }
+  nav ul li.logo{
+    flex: 1;
+    color: var(--color-secundario);
+    font-size: 23px;
+    font-weight: 600;
+    cursor: default;
+    user-select: none;
+  }
+  nav ul li a{
+    color: var(--color-secundario);
+    font-size: 18px;
+    text-decoration: none;
+    transition: .4s;
+  }
+  nav ul li:hover a{
+    color: var(--color-terciario);
+  }
+  nav ul li i{
+    font-size: 23px;
+  }
+  nav ul li.btn{
+    display: none;
+  }
+  nav ul li.btn.hide i:before{
+    content: '\f00d';
+  }
+  @media all and (max-width: 900px){
+    nav{
+      padding: 5px 30px;
+    }
+    nav ul li.items{
+      width: 100%;
+      display: none;
+    }
+    nav ul li.items.show{
+      display: block;
+    }
+    nav ul li.btn{
+      display: block;
+    }
+    nav ul li.items:hover{
+      border-radius: 5px;
+      box-shadow: inset 0 0 5px var(--color-terciario),
+                  inset 0 0 10px var(--color-terciario);
+    }
+    nav ul li.items:hover:after{
+      opacity: 0;
+    }
+  }

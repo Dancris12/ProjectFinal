@@ -82,13 +82,17 @@
     padding: 0;
   }
   
-  .text-center, h3{
+  .text-center,h3{
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     line-height: 1.6;
   }
   
+  h3{
+    text-align: center;
+  }
+
   p {
     margin-bottom: 15px;
   }

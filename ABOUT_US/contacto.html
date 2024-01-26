@@ -45,18 +45,36 @@
       <div class="row">
         <div class="col-md-6">
           <img
-            src="https://images.unsplash.com/photo-1650387253167-4a1395a48564?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1674499978132-373a23ac17b7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
         </div>
-        <div class="col-md.6">
-          <h3>Contacto</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            obcaecati libero tempore porro officiis aperiam mollitia eum sunt
-            voluptas ullam accusantium quidem nesciunt, et animi optio. Id at
-            porro incidunt!
-          </p>
-        </div>
+        <form class="needs-validation col-md-6" novalidate>
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="validationTooltip01">Nombres</label>
+              <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombres" required />
+              <div class="valid-tooltip">Looks good!</div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationTooltip02">Apellidos</label>
+              <input type="text" class="form-control" id="validationTooltip02" placeholder="Apellidos" required/>
+              <div class="valid-tooltip">Looks good!</div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationTooltipUsername">Correo</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="validationTooltipUsernamePrepend" >@</span>
+                </div>
+                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Correo" aria-describedby="validationTooltipUsernamePrepend" required />
+                <div class="invalid-tooltip">
+                  Please choose a unique and valid username.
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
       </div>
     </div>
 
